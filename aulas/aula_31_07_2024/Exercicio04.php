@@ -17,6 +17,8 @@ require_once("Utils.php");
 
 function calculadora ($numero1, $numero2, $operacao){
 
+    $resultado = 'Inválido!';
+    
     $num1 = formataNumFloat($numero1);
     $num2 = formataNumFloat($numero2);
 
@@ -24,9 +26,9 @@ function calculadora ($numero1, $numero2, $operacao){
         $resultado = $num1 + $num2;
 
     } else if ($operacao == 'subtrair'){
-        $resultado = $num1 - $num3;
+        $resultado = $num1 - $num2;
 
-    } else if ($operacao == 'divsao'){
+    } else if ($operacao == 'divisao'){
         $resultado = $num1 / $num2;
 
     } else if ($operacao == 'multiplicar'){
@@ -38,5 +40,5 @@ function calculadora ($numero1, $numero2, $operacao){
 
 }
 
-echo calculadora('1,549', '2,567', 'somar');
+echo calculadora("1,164", "2,684715", 'multiplicar');
 // echo ('O resultado da operação ' . $operacao . 'é: ');
