@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Calculadora</title>
+</head>
+
+<style>
+
+</style>
+
+<body>
+    
+    Digite um número: <input id="numero-1" type="text">
+    <br>
+    <br>
+    Digite outro número: <input id="numero-2" type="text">
+
+    <br>
+    <br>
+    <button id="soma" onclick="calculaOperacao('+')">+</button>
+    <button id="subtracao" onclick="calculaOperacao('-')">-</button>
+    <button id="multiplicacao" onclick="calculaOperacao('*')">x</button>
+    <button id="divisão" onclick="calculaOperacao('/')">÷</button>
+    <br>
+    <br>
+
+    O resultado da operação é: <input type="resultado" id="resultado" disabled>
+
+</body>
+
+<script>
+
+function calculaOperacao (operador){
+    numero1 = document.querySelector('#numero-1').value;
+    numero2 = document.querySelector('#numero-2').value;
+
+    resultado = eval(numero1 + operador + numero2);
+
+    document.querySelector('#resultado').value = resultado;
+
+}
+
+</script>
+
+</html>
